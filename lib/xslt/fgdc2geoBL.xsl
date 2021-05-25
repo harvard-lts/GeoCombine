@@ -102,7 +102,7 @@
   </xsl:variable>
 
   <xsl:variable name="fgdc_base">
-    <xsl:text>https://github.com/harvard-library/harvard-geodata</xsl:text>
+    <xsl:text>https://raw.githubusercontent.com/harvard-library/harvard-geodata/main/fgdc</xsl:text>
   </xsl:variable>
 
   <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz-'" />
