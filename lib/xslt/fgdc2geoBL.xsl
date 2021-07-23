@@ -102,7 +102,7 @@
   </xsl:variable>
 
   <xsl:variable name="fgdc_base">
-    <xsl:text>https://github.com/harvard-library/harvard-geodata</xsl:text>
+    <xsl:text>https://raw.githubusercontent.com/harvard-library/harvard-geodata/main/fgdc/</xsl:text>
   </xsl:variable>
 
   <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz-'" />
@@ -175,7 +175,10 @@
       <xsl:text>/wms\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>/wfs\"</xsl:text>
+      <xsl:text>/wfs\",</xsl:text>
+       <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
+      <xsl:value-of select="$geoserver_root"/>
+      <xsl:text>/downloadfile\",</xsl:text>
       <xsl:text>}</xsl:text>
     <xsl:text>",</xsl:text>
 
