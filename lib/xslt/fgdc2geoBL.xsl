@@ -175,7 +175,10 @@
       <xsl:text>/wms\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>/wfs\"</xsl:text>
+      <xsl:text>/wfs\",</xsl:text>
+       <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
+      <xsl:value-of select="$geoserver_root"/>
+      <xsl:text>/downloadfile\",</xsl:text>
       <xsl:text>}</xsl:text>
     <xsl:text>",</xsl:text>
 
