@@ -178,7 +178,7 @@
       <xsl:text>/wfs\",</xsl:text>
        <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>/downloadfile\",</xsl:text>
+      <xsl:text>/downloadfile\"</xsl:text>
       <xsl:text>}</xsl:text>
     <xsl:text>",</xsl:text>
 
