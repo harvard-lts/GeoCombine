@@ -98,7 +98,7 @@
   </xsl:variable>
 
   <xsl:variable name="geoserver_root">
-    <xsl:text>https://geodata-proxy.lib.harvard.edu/geoserver/proxy/requestfile</xsl:text>
+    <xsl:text>https://geodata-proxy.lib.harvard.edu/geoserver/proxy/</xsl:text>
   </xsl:variable>
 
   <xsl:variable name="fgdc_base">
@@ -172,13 +172,13 @@
       <xsl:text>.xml\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wms\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>/wms\",</xsl:text>
+      <xsl:text>requestfile/wms\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>/wfs\",</xsl:text>
+      <xsl:text>requestfile/wfs\",</xsl:text>
        <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>/downloadfile\",</xsl:text>
+      <xsl:text>downloadfile\",</xsl:text>
       <xsl:text>}</xsl:text>
     <xsl:text>",</xsl:text>
 
