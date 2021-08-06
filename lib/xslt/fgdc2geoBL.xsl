@@ -53,17 +53,7 @@
   </xsl:variable>
 
   <xsl:variable name="uuid">
-    <xsl:choose>
-      <xsl:when test="$institution = 'Harvard'">
-        <xsl:value-of select="substring-after(metadata/idinfo/citation/citeinfo/onlink, 'harvard-')"/>
-      </xsl:when>
-      <xsl:when test="$institution = 'MIT'">
-        <xsl:value-of select="metadata/spdoinfo/ptvctinf/sdtsterm/@Name"/>
-      </xsl:when>
-      <xsl:when test="$institution = 'Tufts'">
-        <xsl:value-of select="metadata/spdoinfo/ptvctinf/sdtsterm/@Name"/>
-      </xsl:when>
-    </xsl:choose>
+    <xsl:value-of select="substring-after(metadata/idinfo/citation/citeinfo/onlink, 'harvard-')"/>
   </xsl:variable>
 
   <xsl:variable name="geoserver_root">
