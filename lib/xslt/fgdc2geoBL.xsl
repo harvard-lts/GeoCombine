@@ -11,39 +11,8 @@
   <xsl:param name="zipName" select="'data.zip'"/>
 
   <xsl:variable name="institution">
-        <xsl:for-each select="metadata">
-            <xsl:choose>
-                <xsl:when test="contains(distinfo/distrib/cntinfo/cntorgp/cntorg, 'Harvard')">
-                    <xsl:text>Harvard</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(distinfo/distrib/cntinfo/cntorgp/cntorg, 'Tufts')">
-                    <xsl:text>Tufts</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(distinfo/distrib/cntinfo/cntorgp/cntorg, 'MIT')">
-                    <xsl:text>MIT</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(cntinfo/cntorgp/cntorg, 'Massachusetts')">
-                    <xsl:text>MassGIS</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(metainfo/metc/cntinfo/cntorgp/cntorg, 'MassGIS')">
-                    <xsl:text>MassGIS</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(distinfo/distrib/cntinfo/cntemail, 'state.ma.us')">
-                    <xsl:text>MassGIS</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(metainfo/metc/cntinfo/cntemail, 'ca.gov')">
-                    <xsl:text>Berkeley</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(metainfo/metc/cntinfo/cntorgp/cntorg, 'Columbia')">
-                    <xsl:text>Columbia</xsl:text>
-                </xsl:when>
-                <xsl:when test="contains(metainfo/metc/cntinfo/cntorgp/cntorg, 'Harvard')">
-                    <xsl:text>Harvard</xsl:text>
-                </xsl:when>
-
-            </xsl:choose>
-        </xsl:for-each>
-    </xsl:variable>
+    <xsl:text>Harvard</xsl:text>
+  </xsl:variable>
 
   <!-- Output bounding box -->
 <xsl:variable name="upperCorner">
@@ -167,7 +136,6 @@
       <xsl:text>{</xsl:text>
       <xsl:text>\"http://www.opengis.net/cat/csw/csdgm\":\"</xsl:text>
       <xsl:value-of select="$fgdc_base"/>
-      <xsl:text>/</xsl:text>
       <xsl:value-of select="translate($uuid, $lowercase, $uppercase)"/>
       <xsl:text>.xml\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wms\":\"</xsl:text>
@@ -178,7 +146,7 @@
       <xsl:text>requestfile/wfs\",</xsl:text>
        <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>downloadfile\",</xsl:text>
+      <xsl:text>downloadfile\"</xsl:text>
       <xsl:text>}</xsl:text>
     <xsl:text>",</xsl:text>
 
