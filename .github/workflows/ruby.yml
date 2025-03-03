@@ -4,7 +4,8 @@ on: [push]
 
 jobs:
   rubocop:
-    runs-on: ubuntu-latest
+    runs-on:
+      group: huit-arc
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
@@ -17,7 +18,8 @@ jobs:
       run: bundle exec rubocop
 
   test:
-    runs-on: ubuntu-latest
+    runs-on:
+      group: huit-arc
     strategy:
       matrix:
         ruby: [2.7, 3.0, 3.1]
