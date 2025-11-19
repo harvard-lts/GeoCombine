@@ -57,9 +57,13 @@
   </xsl:variable>
 
   <xsl:variable name="geoserver_root">
-    <xsl:text>https://geodata-proxy.lib.harvard.edu/geoserver/proxy/</xsl:text>
+    <xsl:text>https://geodata.lib.harvard.edu/</xsl:text>
   </xsl:variable>
 
+  <xsl:variable name="download_root">
+    <xsl:text>https://mps.lib.harvard.edu/assets/file/hgl:</xsl:text>
+  </xsl:variable>
+     
   <xsl:variable name="fgdc_base">
     <xsl:text>https://raw.githubusercontent.com/harvard-library/harvard-geodata/main/fgdc/</xsl:text>
   </xsl:variable>
@@ -136,8 +140,8 @@
       <xsl:text>requestfile/wfs\",</xsl:text>
        <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>downloadfile\"</xsl:text>
-      <xsl:text>}</xsl:text>
+      <xsl:value-of select="translate($uuid, $lowercase, $uppercase)"/>
+      <xsl:text>"}</xsl:text>
     <xsl:text>",</xsl:text>
 
     <xsl:text>"layer_id_s": "</xsl:text>
