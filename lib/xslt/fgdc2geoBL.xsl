@@ -134,10 +134,10 @@
       <xsl:text>.xml\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wms\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>vector:public/wms\",</xsl:text>
+      <xsl:text>vector_public/wms\",</xsl:text>
       <xsl:text>\"http://www.opengis.net/def/serviceType/ogc/wfs\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
-      <xsl:text>vector:public/wfs\",</xsl:text>
+      <xsl:text>vector_public/wfs\",</xsl:text>
        <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
       <xsl:value-of select="$download_root"/>
       <xsl:value-of select="translate($uuid, $lowercase, $uppercase)"/>
