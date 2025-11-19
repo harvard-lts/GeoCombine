@@ -141,7 +141,7 @@
        <xsl:text>\"http://schema.org/DownloadAction\":\"</xsl:text>
       <xsl:value-of select="$geoserver_root"/>
       <xsl:value-of select="translate($uuid, $lowercase, $uppercase)"/>
-      <xsl:text>"}</xsl:text>
+      <xsl:text>\"}</xsl:text>
     <xsl:text>",</xsl:text>
 
     <xsl:text>"layer_id_s": "</xsl:text>
